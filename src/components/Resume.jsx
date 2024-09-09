@@ -3,45 +3,51 @@ import React from 'react'
 const Resume = ({active}) => {
     const educationData = [
         {
-          title: 'University school of the arts',
-          dateRange: '2007 — 2008',
-          description: 'Nemo enims ipsam voluptatem...',
+          title: 'มหาวิทยาลัยราชภัฏเชียงใหม่ ศูนย์แม่ริม',
+          dateRange: '2024 — ปัจจุบัน',
+          description: 'คอมพิวเตอร์ศึกษา แต่ชอบเขียนโปรแกมมากๆ',
         },
         {
-          title: 'New york academy of art',
-          dateRange: '2006 — 2007',
-          description: 'Ratione voluptatem sequi nesciunt...',
+          title: 'มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา ตาก',
+          dateRange: '2022 — 2024',
+          description: 'วิศกรรมไฟฟ้า แต่เรียนไม่จบ เพราะไม่ชอบ เลยชิวมาเรียนใหม่ ชอบเขียนโปรแกรมมากกว่าเลยมาเรียนคอมพิวเตอร์',
         },
         {
-          title: 'High school of art and design',
-          dateRange: '2002 — 2004',
-          description: 'Duis aute irure dolor in reprehenderit...',
+          title: 'โรงเรียนพบพระวิทยาคม',
+          dateRange: '2019 — 2022',
+          description: 'เรียนสายวิทย์ - คณิต',
         },
       ];
 
     const timelineData = [
         {
-            title: 'Creative director',
-            dateRange: '2015 — Present',
-            description: 'Nemo enim ipsam voluptatem...',
+            title: 'Web App จัดการดาวเรือง',
+            dateRange: '2024',
+            description: 'มีระบบการจัดการดาวเรืองและนับจำนวนดาวเรือง และระบบคำนวนตังให้ลูกน้องแต่ละคน',
         },
         {
-            title: 'Art director',
-            dateRange: '2013 — 2015',
-            description: 'Nemo enims ipsam voluptatem...',
+            title: 'Web App สั่งอาหาร',
+            dateRange: '2024',
+            description: 'มีจัดการอาหารเพิ่มลบอาหาร มีระบบOrder รับOrder',
         },
         {
-            title: 'Web designer',
-            dateRange: '2010 — 2013',
-            description: 'Nemo enims ipsam voluptatem...',
+            title: 'Web App จองห้องเล่นเกม',
+            dateRange: '2024',
+            description: 'มีระบบการจองห้องเล่นเกม และโต๊ะเล่นเกม และการจัดการระบบคิว',
         },
     ];
 
     const skillsData = [
-        { title: 'Graphic design', value: 70 },
-        { title: 'Branding', value: 90 },
-        { title: 'WordPress', value: 50 },
-        // Add more skills as needed
+        { title: 'ชอบเรียนรู้อยู่เสมอ , เรียนรู้ด้วยตนเอง', value: 80 },
+        { title: 'React', value: 70 },
+        { title: 'Node.Js', value: 60 },
+        { title: 'express', value: 70 },
+        { title: 'HTML CSS JS', value: 60 },
+        { title: 'Python', value: 75 },
+        { title: 'RestFul API', value: 60 },
+        { title: 'Mongodb', value: 60 },
+        { title: 'bootstrap , tailwind', value: 50 },
+        { title: 'อื่นๆ', value: 40 },
     ];
 
     return (

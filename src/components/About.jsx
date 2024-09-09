@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const About = ({active}) => {
+const About = ({ active }) => {
 
   return (
     <article className={active === "about" ? "about active" : "about"} data-page="about">
@@ -10,22 +10,14 @@ const About = ({active}) => {
 
       <section className="about-text">
         <p>
-          I'm Creative Director and  from Sydney, Australia, working in web development and print media.
-          I enjoy
-          turning complex problems into simple, beautiful and intuitive designs.
+          ตั้งแต่เด็ก ผมชอบเขียนโปรแกรมมาโดยตลอด แต่ด้วยความที่ผมเติบโตมาในชนบท ทำให้ไม่มีโอกาสได้เรียนรู้มากนัก จนกระทั่งผมได้เข้าร่วมการแข่งขันคอมพิวเตอร์ตอนอยู่มัธยมต้น การแข่งขันครั้งนั้นทำให้ผมค้นพบความหลงใหลในตัวเอง ตั้งแต่นั้นผมก็ตั้งใจศึกษาด้านนี้มาโดยตลอด จนเมื่อเข้าสู่มัธยมปลาย ผมมีคอมพิวเตอร์เป็นของตัวเอง และได้ฝึกฝนทักษะการเขียนโปรแกรมอย่างจริงจัง ซึ่งผมยังคงพัฒนาความสามารถเรื่อยมาจนถึงปัจจุบัน
         </p>
 
-        <p>
-          My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-          Moreover, I
-          add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-          across your
-          message and identity in the most creative way. I created web design for many famous brand companies.
-        </p>
+       
       </section>
       <section className="service">
 
-        <h3 className="h3 service-title">What i'm doing</h3>
+        <h3 className="h3 service-title">What I am studying</h3>
 
         <ul className="service-list">
 
@@ -39,7 +31,7 @@ const About = ({active}) => {
               <h4 className="h4 service-item-title">Web design</h4>
 
               <p className="service-item-text">
-                The most modern and high-quality design made at a professional level.
+              การออกแบบเว็บที่สวยและมีคุณภาพสูงที่สุดในระดับมืออาชีพ
               </p>
             </div>
 
@@ -55,7 +47,7 @@ const About = ({active}) => {
               <h4 className="h4 service-item-title">Web development</h4>
 
               <p className="service-item-text">
-                High-quality development of sites at the professional level.
+              การพัฒนาเว็บไซต์ให้มีคุณภาพสูงในระดับมืออาชีพ
               </p>
             </div>
 
@@ -68,10 +60,10 @@ const About = ({active}) => {
             </div>
 
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">Mobile apps</h4>
+              <h4 className="h4 service-item-title">Web apps</h4>
 
               <p className="service-item-text">
-                Professional development of applications for iOS and Android.
+                การพัฒนาเว็บแอพพลิเคชันระดับมืออาชีพ
               </p>
             </div>
 
@@ -80,14 +72,14 @@ const About = ({active}) => {
           <li className="service-item">
 
             <div className="service-icon-box">
-              <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40" />
+              <img src="./assets/images/icon-ai.svg" alt="camera icon" width="40" />
             </div>
 
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">Photography</h4>
+              <h4 className="h4 service-item-title">Matching Learning</h4>
 
               <p className="service-item-text">
-                I make high-quality photos of any category at a professional level.
+               ทำโมเดล Deep Learning ต่างๆ และคณิตของ AI เช่น CNN RNN GANs. 
               </p>
             </div>
 

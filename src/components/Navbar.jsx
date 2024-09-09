@@ -38,17 +38,7 @@ const Navbar = (props) => {
                     >
                         Portfolio
                     </button>
-                </li>
-
-                <li className="navbar-item">
-                    <button
-                       className={props.active === 'blog' ? 'navbar-link active' : 'navbar-link'}
-                        data-nav-link
-                        onClick={() => handleButtonClick('blog')}
-                    >
-                        Blog
-                    </button>
-                </li>
+                </li>  
 
                 <li className="navbar-item">
                     <button

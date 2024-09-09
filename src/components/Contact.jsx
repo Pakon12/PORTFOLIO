@@ -1,6 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
-const Contact = ({active}) => {
+const Contact = ({ active }) => {
+    const [formData, setFormData] = useState({
+        fullname: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.send(
+            'service_3nfvmh8', // ใส่ Service ID ของคุณ
+            'template_fhcw43e', // ใส่ Template ID ของคุณ
+            formData,
+            'VIV_OSUZk0RNJYK-3' // ใส่ User ID ของคุณ
+        ).then(
+            (result) => {
+                alert('ส่งข้อความเรียบร้อยแล้ว!');
+            },
+            (error) => {
+                console.error('ส่งข้อความไม่สำเร็จ:', error.text);
+            }
+        );
+    };
+
     return (
         <article className={active === "contact" ? "contact active" : "contact"} data-page="contact">
             <header>
@@ -9,7 +39,7 @@ const Contact = ({active}) => {
             <section className="mapbox" data-mapbox>
                 <figure>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4672.794722933767!2d99.12192722048962!3d16.901807266607566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ddd760e394ca5b%3A0x5f2671dd97a763e6!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiX4LiE4LmC4LiZ4LmC4Lil4Lii4Li14Lij4Liy4LiK4Lih4LiH4LiE4Lil4Lil4LmJ4Liy4LiZ4LiZ4LiyIOC4leC4suC4gQ!5e0!3m2!1sth!2sth!4v1705779823149!5m2!1sth!2sth"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9282.559487390918!2d98.9236424!3d19.0214542!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da168c9ad8fdbf%3A0xb3f4de687af92574!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4Lij4Liy4LiK4Lig4Lix4LiP4LmA4LiK4Li14Lii4LiH4LmD4Lir4Lih4LmIIOC4qOC4ueC4meC4ouC5jOC5geC4oeC5iOC4o-C4tOC4oQ!5e1!3m2!1sth!2sth!4v1725876921026!5m2!1sth!2sth"
                         width="400"
                         height="300"
                         loading="lazy"
@@ -18,7 +48,7 @@ const Contact = ({active}) => {
             </section>
             <section className="contact-form">
                 <h3 className="h3 form-title">Contact Form</h3>
-                <form action="#" className="form" data-form>
+                <form onSubmit={handleSubmit} className="form" data-form>
                     <div className="input-wrapper">
                         <input
                             type="text"
@@ -26,7 +56,8 @@ const Contact = ({active}) => {
                             className="form-input"
                             placeholder="Full name"
                             required
-                            data-form-input
+                            onChange={handleChange}
+                            value={formData.fullname}
                         />
                         <input
                             type="email"
@@ -34,7 +65,8 @@ const Contact = ({active}) => {
                             className="form-input"
                             placeholder="Email address"
                             required
-                            data-form-input
+                            onChange={handleChange}
+                            value={formData.email}
                         />
                     </div>
                     <textarea
@@ -42,9 +74,10 @@ const Contact = ({active}) => {
                         className="form-input"
                         placeholder="Your Message"
                         required
-                        data-form-input
+                        onChange={handleChange}
+                        value={formData.message}
                     ></textarea>
-                    <button className="form-btn" type="submit" disabled data-form-btn>
+                    <button className="form-btn" type="submit">
                         <ion-icon name="paper-plane"></ion-icon>
                         <span>Send Message</span>
                     </button>
