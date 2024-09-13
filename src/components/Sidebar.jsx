@@ -85,7 +85,7 @@ const Sidebar = () => {
               <div className="contact-info">
                 <p className="contact-title">Location</p>
 
-                <address>tak city, tak, Thailand</address>
+                <address>Chiang Mai city, Chiang Mai, Thailand</address>
               </div>
 
             </li>
